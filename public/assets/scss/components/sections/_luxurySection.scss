@@ -1,0 +1,121 @@
+.luxurySection{
+    background-color: $bg-color;
+    min-height: 100vh;
+    padding: 6.4rem;
+
+    .col-md-6{
+        &.text-right{
+            text-align: right;
+        }
+    }
+}
+
+.luxText{
+    h1{
+        font-size: 5.6rem;
+        font-family: 'Title-body';
+        margin-bottom: 3.6rem;
+        color: $white-color;
+    }
+
+    h4{
+        font-size: 3.7rem;
+        font-family: 'Title-body';
+        margin-bottom: 2.3rem;
+        color: $white-color;
+    }
+
+    p{
+        font-size: 2rem;
+        color: $white-color;
+    }
+}
+
+.luxThumbs{
+    position: relative;
+    z-index: 999;
+    display: flex;
+
+    h2{
+        transform: rotateZ(90deg);
+        text-transform: capitalize;
+        color: $white-color;
+        font-size: 1.8rem;
+        position: relative;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        position: absolute;
+        left: 2rem;
+        top: 0;
+        transform-origin: 0 0;
+
+        span{
+            margin-left: 2rem;
+            display: inline-block;
+            height: 1px;
+            width: 7rem;
+            border-radius: 50%;
+            background-color: $white-color;
+        }
+    }
+
+    ul{
+        flex-wrap: nowrap;
+        margin-left: 9rem;
+    }
+    button{
+        padding: 0;
+        border: none;
+        margin-right: 2.4rem;
+        position: relative;
+        width: 22.5rem;
+        height: 15.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+
+        h4{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: justify;
+            padding: 1.6rem;
+            margin: 0;
+            color: $white-color;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) -10%, rgba(0,0,0,0.05) 59%);
+        }
+    }
+}
+
+.luxMainImg{
+    background: $linear-bg;
+    background: $linear-color;
+    display: inline-block;
+    height: 60rem;
+    width: 50rem;
+    padding: 2px;
+
+    .tabcontent{
+        background-color: $bg-color;
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img{
+            position: relative;
+            top: -3rem;
+            right: -3rem;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

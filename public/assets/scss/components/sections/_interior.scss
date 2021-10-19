@@ -1,0 +1,126 @@
+.interiorDesign{
+    padding: 12.4rem 0 20rem;
+    background-image: url('/assets/images/services.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.interiorInfo{
+    width: 80%;
+    margin: 0 auto;
+
+    h2{
+        position: absolute;
+        text-align: right;
+        font-size: 12.8rem;
+        z-index: 2;
+        bottom: -6rem;
+        opacity: 0.15;
+        letter-spacing: -0.7rem;
+        
+        color: black;
+        -webkit-text-fill-color: $black-color; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: $white-color;
+    }
+    
+    h1{
+        font-size: 3.2rem;
+        font-family: 'Title-body';
+        color: $white-color;
+        margin-bottom: 4.5rem;
+
+        i{
+            margin-right: 1rem;
+        }
+    }
+}
+
+.interiorSlider{
+    position: relative;
+    .item{
+        p{
+            font-size: 2.4rem;
+            color: $white-color;
+            line-height: 3.2rem;
+        }
+    }
+
+    .owl-nav{
+        position: absolute;
+        left: 0;
+        width: auto;
+        display: inline-block;
+        right: auto;
+
+        button{
+            width: 7.2rem;
+            height: 7.2rem;
+            border-radius: 50% !important;
+            border: 1px solid $white-color !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.owl-next{
+                transform: rotate(180deg);
+            }
+
+            i{
+                color: $white-color;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .owl-dots {
+		counter-reset: slides-num; /* Initialize counter. */ 
+        position: absolute;
+        right: 0;
+        left: auto !important;
+        top: 100%;
+        left: 50%;
+        margin-top: 15px;
+
+		&:after {
+			content:  " / 0"counter(slides-num); /* get total number of items - more info on http://www.sitepoint.com/a-little-known-way-to-replace-some-scripts-with-css-counters/ */ 
+			display: inline-block;
+			font-weight: 700;
+			vertical-align: middle;
+            padding-left: 5px;
+            color: $white-color;
+            font-size: 2.4rem;
+            font-family: 'Title-body';
+            margin-top: 4rem;
+		}
+	}
+
+	.owl-dot {
+        display: inline-block;
+		counter-increment: slides-num; /* Increment counter */
+        margin-right: 5px;
+
+		span {
+			display: none !important;
+		}
+
+		&.active {
+
+			&:before {
+				content:  "0"counter(slides-num) ; /* Use the same counter to get current item. */
+				display: inline-block;
+				vertical-align: middle;
+                position: absolute;
+                left: -2rem;
+                top: 0;
+                color: $white-color;
+                font-family: 'Title-body';
+                font-size: 3.2rem;
+			}
+		}
+	}
+
+}

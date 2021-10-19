@@ -1,0 +1,101 @@
+.callBack{
+    padding: 15.8rem 0;
+    position: relative;
+    z-index: 1;
+
+    .container{
+        position: relative;
+
+        .floatText{
+            position: absolute;
+            right: 0;
+            text-align: right;
+            font-size: 12.8rem;
+            z-index: 2;
+            top: 110%;
+            opacity: 0.15;
+            letter-spacing: -0.7rem;
+            
+            color: black;
+            -webkit-text-fill-color: $white-color; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $black-color;
+        }
+    }
+
+    .sectTitle{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            height: 1px;
+            width: 7.2rem;
+            background-color: $black-color;
+            display: inline-block;
+            margin-top: 3.9rem;
+        }
+        h1{
+            font-size: 4.8rem;
+            font-family: 'Title-body';
+            display: inline-block;
+
+            strong{
+                font-weight: normal;
+                width: 70%;
+                display: inline-block;
+            }
+
+            // strong{
+            //     display: inline-block;
+            //     width: 100%;
+            //     font-family: 'Main';
+            //     color: #A9A9A9;
+            //     font-weight: 300;
+            // }
+        }
+    }
+}
+
+.callBackForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.2rem;
+    text-align: center;
+
+    input[type="text"]{
+        width: 54rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $footer-border;
+        margin-bottom: 4.8rem;
+        font-size: 2.4rem;
+        color: $black-color;
+        padding: 1.2rem 0;
+
+        &:focus-visible{
+            outline: none;
+            border-bottom: 2px solid $footer-border;
+        }
+
+        &::placeholder{
+            color: $black-color;
+        }
+
+    }
+
+    input[type="button"]{
+        border: none;
+        margin-top: 1.6rem;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        background-color: $black-color;
+        color: $white-color;
+        font-size: 2.4rem;
+    }
+}

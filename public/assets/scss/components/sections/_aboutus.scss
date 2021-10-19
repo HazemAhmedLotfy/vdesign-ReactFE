@@ -1,0 +1,25 @@
+.aboutUs{
+    padding: 10rem 0;
+
+    .sectTitle{
+        span{
+            height: 1px;
+            width: 7.2rem;
+            background-color: $black-color;
+            display: inline-block;
+            margin-bottom: 3.9rem;
+        }
+        h1{
+            font-size: 3.2rem;
+            font-family: 'Title-body';
+            width: 90%;
+        }
+    }
+
+    .sectText{
+        p{
+            font-size: 2rem;
+            line-height: 3.2rem;
+        }
+    }
+}

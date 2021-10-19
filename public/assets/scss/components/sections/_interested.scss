@@ -1,0 +1,30 @@
+.interestedSection{
+    background-color: #FAFAFA;
+    padding: 8rem 0;
+
+    .sectTitle{
+        text-align: center;
+
+        h1{
+            font-size: 4rem;
+            font-family: 'Title-body';
+            margin-bottom: 2.5rem;
+            text-transform: capitalize;
+        }
+
+        p{
+            font-size: 2.4rem;
+            width: 62%;
+            margin: 0 auto;
+
+            a{
+                color: inherit;
+                text-decoration: underline;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

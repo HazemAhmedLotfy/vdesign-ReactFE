@@ -1,0 +1,204 @@
+.projects{
+    padding: 12.8rem 0 18rem;
+
+    .container{
+        position: relative;
+
+        .floatText{
+            position: absolute;
+            right: 0;
+            text-align: right;
+            font-size: 12.8rem;
+            z-index: 1;
+            top: 70%;
+            opacity: 0.15;
+            letter-spacing: -0.7rem;
+            
+            color: $white-color;
+            -webkit-text-fill-color: $white-color; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $black-color;
+        }
+    }
+
+    .sectTitle{
+        span{
+            height: 1px;
+            width: 7.2rem;
+            background-color: $black-color;
+            display: inline-block;
+            margin-bottom: 3.9rem;
+        }
+        h1{
+            font-size: 3.2rem;
+            font-family: 'Title-body';
+            width: 90%;
+        }
+    }
+}
+
+.proTabcontent{
+    position: relative;
+    z-index: 2;
+}
+
+.prjectsTabs{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+        background-color: transparent;
+        border: none;
+        color: rgba($black-color, .4);
+        border-bottom: 1px solid rgba($black-color, .4);
+        padding: 2rem;
+
+        &.active{
+            color: rgba($black-color, 1);
+            border-bottom: 2px solid rgba($black-color, 1);
+        }
+    }
+}
+
+.projectItem{
+    position: relative;
+    transition: all 0.3s ease;
+    &:hover{
+        .projectData{
+            top: 0;
+        }
+    }
+}
+
+.projectData{
+    top: 100%;
+    background-color: rgba($black-color, .7);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $white-color;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.7s ease;
+
+    h1{
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    span{
+        font-size: 1.6rem;
+    }
+}
+
+.projectSlider{
+    .owl-stage-outer{
+        margin-bottom: 6rem;
+    }
+
+    .owl-nav{
+        position: absolute;
+        left: 5%;
+        width: auto;
+        display: inline-block;
+        right: auto;
+        margin-top: 0 !important;
+
+        button{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50% !important;
+            border: 1px solid $black-color !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+            
+
+            &:hover{
+                color: rgba($white-color, 1) !important;
+                background-color: rgba($black-color, 1) !important;
+                border-bottom: 1px solid rgba($black-color, 1) !important;
+            }
+
+            &.owl-next{
+                transform: rotate(180deg);
+            }
+
+            i{
+                //color: $black-color;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .owl-dots {
+		counter-reset: slides-num; /* Initialize counter. */ 
+        position: absolute;
+        right: 0;
+        //left: auto !important;
+        //top: 100%;
+        left: 60%;
+        margin-top: 0px;
+        height: 6rem;
+        display: flex;
+        //justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $black-color;
+        right: 5%;
+
+        &:before{
+            content: "Scroll";
+            position: absolute;
+            right: 0;
+            font-size: 2.4rem;
+            text-transform: capitalize;
+        }
+
+		&:after {
+			content:  "/ 0"counter(slides-num); /* get total number of items - more info on http://www.sitepoint.com/a-little-known-way-to-replace-some-scripts-with-css-counters/ */ 
+			display: inline-block;
+			vertical-align: middle;
+            //padding-left: 5px;
+            color: $black-color;
+            font-size: 2.4rem;
+            position: absolute;
+            left: 2.8rem;
+		}
+	}
+
+	.owl-dot {
+        display: inline-block;
+		counter-increment: slides-num; /* Increment counter */
+        margin-right: 0.2rem;
+        position: relative;
+
+		span {
+			display: none !important;
+		}
+
+		&.active {
+
+			&:before {
+				content:  "0"counter(slides-num) ; /* Use the same counter to get current item. */
+				display: inline-block;
+				vertical-align: middle;
+                //position: absolute;
+                //left: -1rem;
+                top: 0;
+                color: $black-color;
+                font-size: 2.4rem;
+			}
+		}
+	}
+}
